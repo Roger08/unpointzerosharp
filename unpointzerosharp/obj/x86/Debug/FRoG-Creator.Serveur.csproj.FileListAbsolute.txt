@@ -3,3 +3,5 @@ C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\unpointzerosharp\bin\Debug\u
 C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\unpointzerosharp\obj\x86\Debug\FRoG-Creator.Serveur.csprojResolveAssemblyReference.cache
 C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\unpointzerosharp\obj\x86\Debug\unpointzerosharp.exe
 C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\unpointzerosharp\obj\x86\Debug\unpointzerosharp.pdb
+C:\Users\Hugo\Documents\GitHub\unpointzerosharp\unpointzerosharp\obj\x86\Debug\unpointzerosharp.exe
+C:\Users\Hugo\Documents\GitHub\unpointzerosharp\unpointzerosharp\obj\x86\Debug\unpointzerosharp.pdb
