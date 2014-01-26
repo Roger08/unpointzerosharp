@@ -5,9 +5,9 @@ using System.Text;
 
 namespace unpointzerosharp
 {
-    public static class Answers
+    internal static class Answers
     {
-        public enum AnswerMethods {
+        internal enum AnswerMethods {
             Login,
             Register,
             NewCharacter,

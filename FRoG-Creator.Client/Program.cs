@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace FRoG_Creator.Client
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Point d'entrée principal de l'application.

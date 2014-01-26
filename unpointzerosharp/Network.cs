@@ -8,15 +8,15 @@ using System.Threading;
 
 namespace unpointzerosharp
 {
-    public class Network
+    internal class Network
     {
-        public const int PORT = 4000;
+        const int PORT = 4000;
 
         private TcpListener tcpListener;
         private Thread listenThread;
         private Dictionary<byte, Action<byte, byte[]>> answerHandler;
 
-        public Network()
+        internal Network()
         {
             InitializeAnswers();
             tcpListener = new TcpListener(IPAddress.Any, PORT);
@@ -24,18 +24,17 @@ namespace unpointzerosharp
             listenThread.Start();
         }
 
-        private void ListenClients()
+        internal Dictionary<byte, Action<byte, byte[]>> AnswerHandler
         {
-            tcpListener.Start();
+            get { return answerHandler; }
+        }
 
-            while (true)
-            {
-                Console.WriteLine("En attente de connexion ...");
-                TcpClient tcpClient = tcpListener.AcceptTcpClient();
-
-                Thread clientThread = new Thread(new ParameterizedThreadStart(HandleClient));
-                clientThread.Start(tcpClient);
-            }
+        private void InitializeAnswers()
+        {
+            answerHandler = new Dictionary<byte, Action<byte, byte[]>>();
+            answerHandler.Add((byte)Answers.AnswerMethods.Login, Answers.Login);
+            answerHandler.Add((byte)Answers.AnswerMethods.Register, Answers.Register);
+            answerHandler.Add((byte)Answers.AnswerMethods.NewCharacter, Answers.NewCharacter);
         }
 
         private void HandleClient(object client)
@@ -60,6 +59,20 @@ namespace unpointzerosharp
             }
         }
 
+        private void ListenClients()
+        {
+            tcpListener.Start();
+
+            while (true)
+            {
+                Console.WriteLine("En attente de connexion ...");
+                TcpClient tcpClient = tcpListener.AcceptTcpClient();
+
+                Thread clientThread = new Thread(new ParameterizedThreadStart(HandleClient));
+                clientThread.Start(tcpClient);
+            }
+        }
+
         private void ReadStream(NetworkStream networkStream, byte[] message)
         {
             int index = 0;
@@ -73,15 +86,9 @@ namespace unpointzerosharp
             {
                 if (Program.DEBUG)
                     Console.WriteLine("Réception d'un paquet \"" + (Answers.AnswerMethods)message[0] + "\".");
-            }
-        }
 
-        private void InitializeAnswers()
-        {
-            answerHandler = new Dictionary<byte, Action<byte, byte[]>>();
-            answerHandler.Add((byte)Answers.AnswerMethods.Login, Answers.Login);
-            answerHandler.Add((byte)Answers.AnswerMethods.Register, Answers.Register);
-            answerHandler.Add((byte)Answers.AnswerMethods.NewCharacter, Answers.NewCharacter);
+                //answerHandler[message[0]](,);
+            }
         }
 
     }
