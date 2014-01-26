@@ -14,7 +14,7 @@ namespace unpointzerosharp
 
         private TcpListener tcpListener;
         private Thread listenThread;
-        private Dictionary<byte, Action<byte, string>> answerHandler;
+        private Dictionary<byte, Action<byte, byte[]>> answerHandler;
 
         internal Network()
         {
@@ -24,14 +24,14 @@ namespace unpointzerosharp
             listenThread.Start();
         }
 
-        internal Dictionary<byte, Action<byte, string>> AnswerHandler
+        internal Dictionary<byte, Action<byte, byte[]>> AnswerHandler
         {
             get { return answerHandler; }
         }
 
         private void InitializeAnswers()
         {
-            answerHandler = new Dictionary<byte, Action<byte,string>>();
+            answerHandler = new Dictionary<byte, Action<byte, byte[]>>();
             answerHandler.Add((byte)Answers.AnswerMethods.Login, Answers.Login);
             answerHandler.Add((byte)Answers.AnswerMethods.Register, Answers.Register);
             answerHandler.Add((byte)Answers.AnswerMethods.NewCharacter, Answers.NewCharacter);

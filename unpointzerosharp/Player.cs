@@ -11,23 +11,35 @@ namespace unpointzerosharp
 {
     internal class Player
     {
-        private Socket socket;
-        private Thread thread;
-        string ip;
-        byte status;
-
-        private enum clientStatus
-        { 
+        internal enum ClientStatus
+        {
             connected,
             inGame,
         }
+
+        private Socket socket;
+        private Thread thread;
+        private string ip;
+        private ClientStatus status;
 
         internal Player(Socket Sock, Thread Thread)
         {
             socket = Sock;
             thread = Thread;
+            //ip = ???
 
-            status = (byte)clientStatus.connected;
+            status = ClientStatus.connected;
+        }
+
+        internal string Ip
+        {
+            get { return ip; }
+        }
+
+        internal ClientStatus Status
+        {
+            get { return status; }
+            set { status = value; }
         }
     }
 }
