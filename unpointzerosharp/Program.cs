@@ -7,8 +7,11 @@ namespace unpointzerosharp
 {
     class Program
     {
+        public const bool DEBUG = true;
+
         static void Main(string[] args)
         {
+            Network network = new Network();
         }
     }
 }

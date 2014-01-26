@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace FRoG_Creator.Client
 {
-    public partial class Form1 : Form
+    public partial class ClientForm : Form
     {
-        public Form1()
+        public ClientForm()
         {
             InitializeComponent();
         }

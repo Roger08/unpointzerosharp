@@ -71,12 +71,14 @@ namespace unpointzerosharp
             }
             else
             {
-
+                if (Program.DEBUG)
+                    Console.WriteLine("Réception d'un paquet \"" + (Answers.AnswerMethods)message[0] + "\".");
             }
         }
 
         private void InitializeAnswers()
         {
+            answerHandler = new Dictionary<byte, Action<byte, byte[]>>();
             answerHandler.Add((byte)Answers.AnswerMethods.Login, Answers.Login);
             answerHandler.Add((byte)Answers.AnswerMethods.Register, Answers.Register);
             answerHandler.Add((byte)Answers.AnswerMethods.NewCharacter, Answers.NewCharacter);

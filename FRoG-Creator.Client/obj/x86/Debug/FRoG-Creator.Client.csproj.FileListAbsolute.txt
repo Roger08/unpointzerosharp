@@ -1,0 +1,7 @@
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\bin\Debug\FRoG-Creator.Client.exe
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\bin\Debug\FRoG-Creator.Client.pdb
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\obj\x86\Debug\FRoG-Creator.Client.csprojResolveAssemblyReference.cache
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\obj\x86\Debug\FRoG_Creator.Client.Properties.Resources.resources
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\obj\x86\Debug\FRoG-Creator.Client.csproj.GenerateResource.Cache
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\obj\x86\Debug\FRoG-Creator.Client.exe
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\obj\x86\Debug\FRoG-Creator.Client.pdb

@@ -15,7 +15,7 @@ namespace FRoG_Creator.Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ClientForm());
         }
     }
 }
