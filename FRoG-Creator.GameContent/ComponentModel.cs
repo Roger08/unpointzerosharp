@@ -10,11 +10,6 @@ namespace FRoG_Creator.GameContent
 
     }
 
-    interface IPlayable
-    {
-        
-    }
-
     interface IBeatable
     {
         protected int life;
@@ -25,4 +20,28 @@ namespace FRoG_Creator.GameContent
             set { life = value; }
         }
     }
+
+    interface IPlayable
+    {
+        
+    }
+
+    interface Iplaceable
+    {
+        protected byte x;
+        protected byte y;
+
+        public byte X
+        {
+            get { return x; }
+            set { x = value; }
+        }
+
+        public byte Y
+        {
+            get { return y; }
+            set { y = value; }
+        }
+    }
+
 }
