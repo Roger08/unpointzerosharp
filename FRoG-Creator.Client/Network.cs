@@ -32,6 +32,20 @@ namespace FRoG_Creator.Client
                 tcpClient = new TcpClient("localhost", PORT);
                 serverStatus = ConnectStatus.Online;
                 networkStream = tcpClient.GetStream();
+
+                byte[] message = new byte[4096];
+
+                while (true)
+                {
+                    try
+                    {
+                        ReadStream(networkStream, message);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Erreur lors de la réception d'un paquet ... Erreur : " + e.Message);
+                    }
+                }
             }
             catch
             {
@@ -52,6 +66,17 @@ namespace FRoG_Creator.Client
         internal ConnectStatus ServerStatus
         {
             get { return serverStatus; }
+        }
+
+        private void ReadStream(NetworkStream networkStream, byte[] message)
+        {
+            int index = 0;
+            index = networkStream.Read(message, index, 1);
+
+            if (index != 0)
+            {
+                //A faire : Conversion de la queue du paquet en string et réception des paquets
+            }
         }
 
     }

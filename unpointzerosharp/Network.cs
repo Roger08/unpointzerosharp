@@ -14,7 +14,7 @@ namespace unpointzerosharp
 
         private TcpListener tcpListener;
         private Thread listenThread;
-        private Dictionary<byte, Action<byte, byte[]>> answerHandler;
+        private Dictionary<byte, Action<byte, string>> answerHandler;
 
         internal Network()
         {
@@ -24,14 +24,14 @@ namespace unpointzerosharp
             listenThread.Start();
         }
 
-        internal Dictionary<byte, Action<byte, byte[]>> AnswerHandler
+        internal Dictionary<byte, Action<byte, string>> AnswerHandler
         {
             get { return answerHandler; }
         }
 
         private void InitializeAnswers()
         {
-            answerHandler = new Dictionary<byte, Action<byte, byte[]>>();
+            answerHandler = new Dictionary<byte, Action<byte,string>>();
             answerHandler.Add((byte)Answers.AnswerMethods.Login, Answers.Login);
             answerHandler.Add((byte)Answers.AnswerMethods.Register, Answers.Register);
             answerHandler.Add((byte)Answers.AnswerMethods.NewCharacter, Answers.NewCharacter);
@@ -78,16 +78,16 @@ namespace unpointzerosharp
             int index = 0;
             index = networkStream.Read(message, index, 1);
 
-            if (index == 0)
-            {
-                Console.WriteLine("Déconnexion d'un client ...");
-            }
-            else
+            if (index != 0)
             {
                 if (Program.DEBUG)
                     Console.WriteLine("Réception d'un paquet \"" + (Answers.AnswerMethods)message[0] + "\".");
 
-                //answerHandler[message[0]](,);
+                //A faire : Conversion de la queue du paquet en string et réception des paquets
+            }
+            else
+            {
+                Console.WriteLine("Déconnexion d'un client ...");
             }
         }
 
