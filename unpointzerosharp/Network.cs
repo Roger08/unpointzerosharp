@@ -15,10 +15,12 @@ namespace unpointzerosharp
         private TcpListener tcpListener;
         private Thread listenThread;
         private Dictionary<byte, Action<byte, byte[]>> answerHandler;
+        private List<Player> players;
 
         internal Network()
         {
             InitializeAnswers();
+            players = new List<Player>();
             tcpListener = new TcpListener(IPAddress.Any, PORT);
             listenThread = new Thread(new ThreadStart(ListenClients));
             listenThread.Start();
@@ -32,9 +34,9 @@ namespace unpointzerosharp
         private void InitializeAnswers()
         {
             answerHandler = new Dictionary<byte, Action<byte, byte[]>>();
-            answerHandler.Add((byte)Answers.AnswerMethods.Login, Answers.Login);
-            answerHandler.Add((byte)Answers.AnswerMethods.Register, Answers.Register);
-            answerHandler.Add((byte)Answers.AnswerMethods.NewCharacter, Answers.NewCharacter);
+            answerHandler.Add((byte)Response.AnswerMethods.Login, Response.Login);
+            answerHandler.Add((byte)Response.AnswerMethods.Register, Response.Register);
+            answerHandler.Add((byte)Response.AnswerMethods.NewCharacter, Response.NewCharacter);
         }
 
         private void HandleClient(object client)
@@ -68,6 +70,8 @@ namespace unpointzerosharp
                 Console.WriteLine("En attente de connexion ...");
                 TcpClient tcpClient = tcpListener.AcceptTcpClient();
 
+                players.Add(new Player(tcpClient));
+
                 Thread clientThread = new Thread(new ParameterizedThreadStart(HandleClient));
                 clientThread.Start(tcpClient);
             }
@@ -75,15 +79,13 @@ namespace unpointzerosharp
 
         private void ReadStream(NetworkStream networkStream, byte[] message)
         {
-            int index = 0;
-            index = networkStream.Read(message, index, 1);
-
-            if (index != 0)
+            if (networkStream.Read(message, 0, 1) != 0)
             {
                 if (Program.DEBUG)
-                    Console.WriteLine("Réception d'un paquet \"" + (Answers.AnswerMethods)message[0] + "\".");
+                {
+                    Console.WriteLine("Réception d'un paquet \"" + (Response.AnswerMethods)message[0] + "\".");
+                }
 
-                //A faire : Conversion de la queue du paquet en string et réception des paquets
             }
             else
             {

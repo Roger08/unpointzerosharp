@@ -13,22 +13,20 @@ namespace unpointzerosharp
     {
         internal enum ClientStatus
         {
-            connected,
-            inGame,
+            CONNECTED,
+            IN_GAME,
         }
 
-        private Socket socket;
+        private TcpClient tcpClient;
         private Thread thread;
         private string ip;
         private ClientStatus status;
 
-        internal Player(Socket Sock, Thread Thread)
+        internal Player(TcpClient TcpClient)
         {
-            socket = Sock;
-            thread = Thread;
-            //ip = ???
-
-            status = ClientStatus.connected;
+            tcpClient = TcpClient;
+            ip = tcpClient.Client.RemoteEndPoint.ToString();
+            status = ClientStatus.CONNECTED;
         }
 
         internal string Ip

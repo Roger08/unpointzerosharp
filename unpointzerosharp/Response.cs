@@ -6,7 +6,7 @@ using System.IO;
 
 namespace unpointzerosharp
 {
-    internal static class Answers
+    internal static class Response
     {
         const char SEP = (char)0;
         internal enum AnswerMethods {
