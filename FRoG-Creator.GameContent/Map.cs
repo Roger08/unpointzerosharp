@@ -7,11 +7,11 @@ namespace FRoG_Creator.GameContent
 {
     public class Map
     {
-        List<ComponentModel> MapContent;
+        private List<Component> mapContent;
 
         public Map()
         {
-            MapContent = new List<ComponentModel>();
+            mapContent = new List<Component>();
         }
     }
 

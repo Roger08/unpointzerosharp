@@ -43,11 +43,14 @@
     <Compile Include="CharacterModel.cs" />
     <Compile Include="CharacterObject.cs" />
     <Compile Include="CharacterPlayerObject.cs" />
-    <Compile Include="ComponentModel.cs" />
+    <Compile Include="Chunck.cs" />
+    <Compile Include="Component.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResourceObject.cs" />
     <Compile Include="ResourceModel.cs" />
+    <Compile Include="Stage.cs" />
+    <Compile Include="World.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
