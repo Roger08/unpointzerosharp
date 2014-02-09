@@ -40,13 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComponentModels\INonPlayableCharacter.cs" />
+    <Compile Include="Graphics\Animation.cs" />
+    <Compile Include="ComponentObjects\NonPlayableCharacter.cs" />
     <Compile Include="ComponentObjects\Character.cs" />
-    <Compile Include="ComponentModels\IPlayableCharacter.cs" />
+    <Compile Include="ComponentObjects\PlayableCharacter.cs" />
+    <Compile Include="LogicalObjects\Item.cs" />
     <Compile Include="LogicalObjects\Shop.cs" />
+    <Compile Include="LogicalObject.cs" />
     <Compile Include="World\Chunck.cs" />
-    <Compile Include="ComponentObjects\ComponentObject.cs" />
-    <Compile Include="GameObject.cs" />
+    <Compile Include="ComponentObject.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="World\Map.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,9 +56,7 @@
     <Compile Include="World\Stage.cs" />
     <Compile Include="World\World.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LogicalModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -7,11 +7,13 @@ namespace FRoG_Creator.GameContent
 {
     public class Map
     {
-        private List<GameObject> mapContent;
+        public const byte SQUARE_SIZE = 32;
+
+        private List<ComponentObject> mapContent;
 
         public Map()
         {
-            mapContent = new List<GameObject>();
+            mapContent = new List<ComponentObject>();
         }
     }
 

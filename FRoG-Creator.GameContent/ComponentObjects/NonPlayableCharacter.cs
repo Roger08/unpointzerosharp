@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public interface INonPlayableCharacter
+    public class NonPlayableCharacter : Character
     {
 
     }

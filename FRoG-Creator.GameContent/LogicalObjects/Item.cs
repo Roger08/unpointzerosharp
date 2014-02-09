@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FRoG_Creator.GameContent
+namespace FRoG_Creator.GameContent.LogicalObjects
 {
-    public interface IPlayableCharacter
+    class Item
     {
-
     }
 }

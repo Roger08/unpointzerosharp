@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FRoG_Creator.GameContent.ComponentObjects
+namespace FRoG_Creator.GameContent
 {
-    public abstract class ComponentObject : GameObject
+    public class ComponentObject
     {
         protected float x;
         protected float y;
+        protected string spriteUrl;
 
         public float X
         {
@@ -21,5 +22,12 @@ namespace FRoG_Creator.GameContent.ComponentObjects
             get { return y; }
             set { y = value; }
         }
+
+        public string SpriteUrl
+        {
+            get { return spriteUrl; }
+            set { spriteUrl = value; }
+        }
+
     }
 }

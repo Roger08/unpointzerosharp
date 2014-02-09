@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public abstract class GameObject
+    public class LogicalObject
     {
 
     }
