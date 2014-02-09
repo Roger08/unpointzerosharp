@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public abstract class Component
+    public abstract class ComponentObject
     {
         protected abstract byte x;
         protected abstract byte y;

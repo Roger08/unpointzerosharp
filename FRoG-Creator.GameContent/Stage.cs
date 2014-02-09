@@ -7,14 +7,17 @@ namespace FRoG_Creator.GameContent
 {
     public class Stage
     {
-        public const byte WIDTH = 100;
-        public const byte HEIGHT = 100;
+        protected string name;
 
-        private Chunck[,] content;
-
-        public Stage()
+        public Stage(string Name)
         {
-            content = new Chunck[WIDTH, HEIGHT];
+            name = Name;
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
         }
 
     }
