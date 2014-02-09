@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FRoG_Creator.GameContent
+namespace FRoG_Creator.GameContent.ComponentObjects
 {
-    public abstract class ComponentObject
+    public abstract class ComponentObject : GameObject
     {
-        protected byte x;
-        protected byte y;
+        protected float x;
+        protected float y;
 
-        public byte X
+        public float X
         {
             get { return x; }
             set { x = value; }
         }
 
-        public byte Y
+        public float Y
         {
             get { return y; }
             set { y = value; }
         }
-
     }
 }

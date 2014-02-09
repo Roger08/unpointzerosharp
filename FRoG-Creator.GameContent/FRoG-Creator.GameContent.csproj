@@ -40,18 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CharacterModel.cs" />
-    <Compile Include="CharacterObject.cs" />
-    <Compile Include="CharacterPlayerObject.cs" />
-    <Compile Include="Chunck.cs" />
-    <Compile Include="ComponentObject.cs" />
+    <Compile Include="ComponentModels\ICharacterModel.cs" />
+    <Compile Include="ComponentObjects\Character.cs" />
+    <Compile Include="ComponentObjects\PlayableCharacter.cs" />
+    <Compile Include="LogicalObjects\Shop.cs" />
+    <Compile Include="World\Chunck.cs" />
+    <Compile Include="ComponentObjects\ComponentObject.cs" />
+    <Compile Include="GameObject.cs" />
     <Compile Include="Log.cs" />
-    <Compile Include="Map.cs" />
+    <Compile Include="World\Map.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResourceObject.cs" />
-    <Compile Include="ResourceModel.cs" />
-    <Compile Include="Stage.cs" />
-    <Compile Include="World.cs" />
+    <Compile Include="ComponentObjects\Resource.cs" />
+    <Compile Include="ComponentModels\IResourceModel.cs" />
+    <Compile Include="World\Stage.cs" />
+    <Compile Include="World\World.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LogicalModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

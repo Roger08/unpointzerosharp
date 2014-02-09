@@ -5,12 +5,11 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public class CharacterPlayerObject
+    public class Character : GameObject, ICharacterModel
     {
-        public CharacterPlayerObject()
+        public Character()
         {
 
         }
-
     }
 }

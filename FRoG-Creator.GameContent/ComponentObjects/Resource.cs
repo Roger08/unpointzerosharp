@@ -5,11 +5,12 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public class CharacterObject : CharacterModel
+    public class Resource : IResourceModel
     {
-        public CharacterObject()
+        public Resource()
         {
 
         }
+
     }
 }

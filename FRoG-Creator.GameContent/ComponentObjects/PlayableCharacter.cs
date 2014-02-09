@@ -5,14 +5,12 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public class Map
+    public class PlayableCharacter : Character, ICharacterModel
     {
-        private List<ComponentObject> mapContent;
-
-        public Map()
+        public PlayableCharacter()
         {
-            mapContent = new List<ComponentObject>();
-        }
-    }
 
+        }
+
+    }
 }

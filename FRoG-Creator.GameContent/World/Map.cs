@@ -5,12 +5,14 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public class ResourceObject : ResourceModel
+    public class Map
     {
-        public ResourceObject()
+        private List<GameObject> mapContent;
+
+        public Map()
         {
-
+            mapContent = new List<GameObject>();
         }
-
     }
+
 }

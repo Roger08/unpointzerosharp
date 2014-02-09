@@ -5,12 +5,8 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public class ResourceModel
+    public abstract class GameObject
     {
-        public ResourceModel()
-        {
-
-        }
 
     }
 }
