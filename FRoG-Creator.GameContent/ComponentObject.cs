@@ -7,16 +7,16 @@ namespace FRoG_Creator.GameContent
 {
     public abstract class ComponentObject
     {
-        protected abstract byte x;
-        protected abstract byte y;
+        protected byte x;
+        protected byte y;
 
-        public abstract byte X
+        public byte X
         {
             get { return x; }
             set { x = value; }
         }
 
-        public abstract byte Y
+        public byte Y
         {
             get { return y; }
             set { y = value; }

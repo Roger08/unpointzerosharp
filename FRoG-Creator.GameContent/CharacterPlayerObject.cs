@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public class CharacterPlayerObject : IBeatable, Iplaceable, IPlayable
+    public class CharacterPlayerObject
     {
         public CharacterPlayerObject()
         {

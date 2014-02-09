@@ -1,0 +1,5 @@
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GameContent\obj\Debug\FRoG-Creator.GameContent.csprojResolveAssemblyReference.cache
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GameContent\bin\Debug\FRoG-Creator.GameContent.dll
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GameContent\bin\Debug\FRoG-Creator.GameContent.pdb
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GameContent\obj\Debug\FRoG-Creator.GameContent.dll
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GameContent\obj\Debug\FRoG-Creator.GameContent.pdb

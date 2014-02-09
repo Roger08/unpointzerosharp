@@ -18,7 +18,7 @@ namespace FRoG_Creator.Client
             Offline,
         }
 
-        private Dictionary<byte, Action<byte, byte[]>> answerHandler;
+        private Dictionary<byte, Action<byte, byte[]>> responseHandler;
         private TcpClient tcpClient;
         private NetworkStream networkStream;
 
@@ -55,7 +55,7 @@ namespace FRoG_Creator.Client
 
         internal Dictionary<byte, Action<byte, byte[]>> AnswerHandler
         {
-            get { return answerHandler; }
+            get { return responseHandler; }
         }
 
         internal NetworkStream NetworkStream

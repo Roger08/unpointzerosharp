@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public class ResourceObject : ResourceModel, IBeatable, Iplaceable
+    public class ResourceObject : ResourceModel
     {
         public ResourceObject()
         {

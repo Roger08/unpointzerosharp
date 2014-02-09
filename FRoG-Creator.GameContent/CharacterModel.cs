@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public abstract class CharacterModel : ComponentModel
+    public abstract class CharacterModel
     {
         protected string name;
         protected string spriteUrl;

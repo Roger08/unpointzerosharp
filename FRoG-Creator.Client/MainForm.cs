@@ -16,7 +16,7 @@ namespace FRoG_Creator.Client
             renderWindow = new RenderWindow(videoMode, title);
         }
 
-        internal void Show()
+        internal static void Show()
         {
             //Code permettant de générer la vue
 

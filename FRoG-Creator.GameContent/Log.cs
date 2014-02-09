@@ -7,12 +7,6 @@ namespace FRoG_Creator.GameContent
 {
     public static class Log
     {
-        protected static List<string> messages = new List<string>();
-
-        public static List<string> Messages
-        {
-            get { return messages; }
-            set { messages = value; }
-        }
+        public static List<string> Messages = new List<string>();
     }
 }
