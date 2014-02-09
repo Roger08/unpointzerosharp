@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public class Resource : IResourceModel
+    public class Resource
     {
         public Resource()
         {

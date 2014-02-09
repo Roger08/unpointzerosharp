@@ -5,12 +5,8 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public class PlayableCharacter : Character, ICharacterModel
+    public interface INonPlayableCharacter
     {
-        public PlayableCharacter()
-        {
-
-        }
 
     }
 }

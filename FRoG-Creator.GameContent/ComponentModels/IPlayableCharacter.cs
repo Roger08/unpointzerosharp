@@ -5,9 +5,8 @@ using System.Text;
 
 namespace FRoG_Creator.GameContent
 {
-    public interface ICharacterModel
+    public interface IPlayableCharacter
     {
-        public string Name { get; set; }
-        public string SpriteUrl { get; set; }
+
     }
 }
