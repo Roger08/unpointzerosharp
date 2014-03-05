@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using FRoG_Creator.GUI;
 
 namespace FRoG_Creator.Client
 {
@@ -16,7 +17,7 @@ namespace FRoG_Creator.Client
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-
+            GameWindow gameWindow = new GameWindow();
         }
     }
 }

@@ -1,0 +1,8 @@
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GUI\obj\Debug\FRoG-Creator.GUI.csprojResolveAssemblyReference.cache
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GUI\bin\Debug\FRoG-Creator.GUI.dll
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GUI\bin\Debug\FRoG-Creator.GUI.pdb
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GUI\bin\Debug\sfmlnet-audio-2.dll
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GUI\bin\Debug\sfmlnet-graphics-2.dll
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GUI\bin\Debug\sfmlnet-window-2.dll
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GUI\obj\Debug\FRoG-Creator.GUI.dll
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.GUI\obj\Debug\FRoG-Creator.GUI.pdb

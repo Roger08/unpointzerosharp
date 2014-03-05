@@ -9,3 +9,5 @@ C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\obj\x86\
 C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\bin\Debug\sfmlnet-audio-2.dll
 C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\bin\Debug\sfmlnet-graphics-2.dll
 C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\bin\Debug\sfmlnet-window-2.dll
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\bin\Debug\FRoG-Creator.GUI.dll
+C:\Users\Matthieu\Documents\GitHub\unpointzerosharp\FRoG-Creator.Client\bin\Debug\FRoG-Creator.GUI.pdb
