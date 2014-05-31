@@ -2,18 +2,20 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7D3A1101-0684-434A-BD6D-CACAADA18C50}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{3865341E-8DD4-417D-A61C-54913106A7C2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FRoG_Creator.GameContent</RootNamespace>
-    <AssemblyName>FRoG-Creator.GameContent</AssemblyName>
+    <RootNamespace>FRoG_Creator.Editor</RootNamespace>
+    <AssemblyName>FRoG-Creator.Editor</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,7 +24,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,6 +34,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="sfmlnet-audio-2">
+      <HintPath>..\..\..\..\Downloads\SFML.Net-2.1-32bits\SFML.Net-2.1\lib\sfmlnet-audio-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-graphics-2">
+      <HintPath>..\..\..\..\Downloads\SFML.Net-2.1-32bits\SFML.Net-2.1\lib\sfmlnet-graphics-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-window-2">
+      <HintPath>..\..\..\..\Downloads\SFML.Net-2.1-32bits\SFML.Net-2.1\lib\sfmlnet-window-2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,27 +52,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity.cs" />
-    <Compile Include="Graphics\Animation.cs" />
-    <Compile Include="ComponentObjects\NonPlayableCharacter.cs" />
-    <Compile Include="ComponentObjects\Character.cs" />
-    <Compile Include="ComponentObjects\PlayableCharacter.cs" />
-    <Compile Include="LogicalObjects\Item.cs" />
-    <Compile Include="LogicalObjects\Shop.cs" />
-    <Compile Include="LogicalObject.cs" />
-    <Compile Include="Map.cs" />
-    <Compile Include="Tile.cs" />
-    <Compile Include="World\Chunck.cs" />
-    <Compile Include="ComponentObject.cs" />
-    <Compile Include="Log.cs" />
-    <Compile Include="World\Map.cs" />
+    <Compile Include="EditorForm.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ComponentObjects\Resource.cs" />
-    <Compile Include="World\Stage.cs" />
-    <Compile Include="World\World.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\" />
+    <ProjectReference Include="..\FRoG-Creator.GameContent\FRoG-Creator.GameContent.csproj">
+      <Project>{7D3A1101-0684-434A-BD6D-CACAADA18C50}</Project>
+      <Name>FRoG-Creator.GameContent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FRoG-Creator.Gui\FRoG-Creator.Gui.csproj">
+      <Project>{7147BFF3-2222-49A1-94EA-FB2522DA15C0}</Project>
+      <Name>FRoG-Creator.Gui</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
